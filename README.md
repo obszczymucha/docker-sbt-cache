@@ -4,7 +4,7 @@ This will create a container for SBT cache. Very handy in Australia, due to [thi
 ## How to run
 Clone this repo and run:
 ```
-docker build . -t sbt-cache-image
+docker build -t sbt-cache-image .
 docker run --name sbt-cache sbt-cache-image
 ```
 
