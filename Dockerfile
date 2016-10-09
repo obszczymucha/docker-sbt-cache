@@ -1,10 +1,11 @@
 FROM alpine
 RUN apk add --no-cache bash
-RUN mkdir /root/.sbt
 VOLUME ["/root/.sbt"]
-RUN mkdir /root/.ivy2
 VOLUME ["/root/.ivy2"]
-RUN mkdir /root/.activator
 VOLUME ["/root/.activator"]
 WORKDIR /root
+RUN apk add -U tzdata
+RUN cp /usr/share/zoneinfo/Australia/Melbourne /etc/localtime
+RUN echo "Australia/Melbourne" > /etc/timezone
+RUN apk del tzdata
 ENTRYPOINT ["/bin/bash"]
