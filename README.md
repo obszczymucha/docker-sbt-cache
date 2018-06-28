@@ -12,3 +12,5 @@ Then use `activator` script as you'd normally use activator, e.g.
 ```activator test```
 
 The first time it'll pull SBT dependencies and cache them inside the container. Subsequent executions will be fast!
+
+For usage, check `run.sh` from https://github.com/obszczymucha/docker-activator-bootstrap.
